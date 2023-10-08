@@ -1,0 +1,28 @@
+
+
+
+  
+  @media (min-width: 768px) {
+    /* Styles for desktop view (minimum width of 768px) */
+    body {
+      /* Add your desktop-specific styles here */
+      font-size: 166px; /* Example style for desktop */
+    }
+  }
+
+  
+@media (max-width: 767px) {
+  /* Hide the content for smaller screens (e.g., mobile devices) */
+  body {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  /* Styles for desktop view (minimum width of 768px) */
+  body {
+    
+    font-size: 16px; /* Example style for desktop */
+  } 
+}

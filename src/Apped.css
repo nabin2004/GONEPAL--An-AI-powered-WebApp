@@ -1,0 +1,22 @@
+.mess{
+    color: #000;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1189px) {
+    .desktop-message{
+      display: block;
+    }
+  
+  }
+  
+  @media (min-width: 768px) {
+    /* Styles for desktop view (minimum width of 768px) */
+    .desktop-message {
+      /* Add your desktop-specific styles here */
+      font-size: 16px; /* Example style for desktop */
+    }
+  }
+  

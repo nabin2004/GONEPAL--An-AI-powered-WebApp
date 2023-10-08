@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import PhoneNumber from './phonenumber';
 
 // Define your image imports
 import GroupedyouImage from './Groupedyou.png';
@@ -36,7 +34,7 @@ function App() {
           <div className="div3"> </div>
           <div className="div4"><Searchbar /></div>
           <div className="div5"><Leftpanel /></div>
-          <div className="div6"><DisplayImage /></div>
+          <div className="div6"><Phone /></div>
           <div className="div7"><Rightpanel /></div>
           <div className="div8"><XButton /></div>
         </div>
@@ -46,27 +44,21 @@ function App() {
         </div>
       )}
     </div>
-    
   );
 }
 
+const PhoneNumber = () => {
+  return <div>Important Phone Number Page</div>;
+};
 
-// function Phone() {
-//   const handlePhoneClick = () => {
-//     // Select the element with the class 'div6'
-//     const div6Element = document.querySelector('.div6');
-//     if (div6Element) {
-//       // Replace the content of 'div6' with the desired text
-//       div6Element.innerHTML = '<p>Important Phone</p>';
-//     }
-//   };
+export default PhoneNumber;
 
-//   return (
-//     <p className="X" onClick={handlePhoneClick}>
-//       <p>Important Phone Number</p>
-//     </p>
-//   );
-// }
+
+
+
+
+
+
 
 function DisplayImage() {
   const gridContainerStyle = {
@@ -100,57 +92,6 @@ function DisplayImage() {
     </div>
   );
 }
-
-
-// Components for other menu items
-// Implement similar to Phone component for each menu item
-
-// Services component
-function Services() {
-  const handlePhoneClick = () => {
-    // Select the element with the class 'div6'
-    const div6Element = document.querySelector('.div6');
-    if (div6Element) {
-      // Replace the content of 'div6' with the desired text
-      div6Element.innerHTML = '<p>Important Phone</p>';
-    }
-  };
-
-  return (
-    <p className="X" onClick={handlePhoneClick}>
-      <p>Important Phone Number</p>
-    </p>
-  );
-}
-// Maps component
-function Maps() {
-  // Implement the content for Maps
-}
-
-// Weather component
-function Weather() {
-  // Implement the content for Weather
-}
-
-// Notices component
-function Notices() {
-  // Implement the content for Notices
-}
-
-// Links component
-function Linked() {
-  // Implement the content for Links
-}
-
-// Horoscope component
-function Horoscope() {
-  // Implement the content for Horoscope
-}
-
-
-
-
-
 
 
 
@@ -312,7 +253,9 @@ function Leftpanel() {
       {menu.map((forumName, index) => (
         <div key={index}>
           {forumName === 'Important Phone Number' ? (
-            compounded[2] // Using Phone component from compounded array
+            <a href={linked[3]} target="_blank" rel="noopener noreferrer">
+              <Left name={forumName} icon={<img src={locArray[index]} alt={locArray[3]} />} />
+            </a>
           ) : (
             <a href={linked[index]} rel="noopener noreferrer">
               <Left name={forumName} icon={<img src={locArray[index]} alt={forumName} />} />
@@ -325,6 +268,7 @@ function Leftpanel() {
 }
 
 
+
 function Left({ name, icon }) {
   return (
     <div className='pass'>
@@ -334,23 +278,13 @@ function Left({ name, icon }) {
   );
 }
 
-
-const compounded = [
-  <Services />,
-  <Maps />,
-  <Weather />,
-  <Notices />,
-  <Linked />,
-  <Horoscope />
-]
-
 const menu = [
   "Home",
   "Services",
   "Maps",
   "Important Phone Number",
   "Weather Update",
-  "Results",
+  "Important Notices",
   "Links",
   "Horoscope"
 ];
@@ -441,5 +375,7 @@ if (div6Element) {
     </button>
   );
 }
+
+
 
 export default App;
